@@ -63,7 +63,7 @@ try:
 			time.sleep(10)
 		else:
 			if elapsedTimeSeconds < fiveMinutesSeconds:
-				elapsedTimeSeconds += 100
+				elapsedTimeSeconds += 1
 				print(f'Door is open, timer = {elapsedTimeSeconds}')
 			else:
 				print("Door was open for 5 minutes, pressing switch!")
