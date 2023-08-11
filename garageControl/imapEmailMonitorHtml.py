@@ -6,36 +6,36 @@ from email.mime.multipart import MIMEMultipart
 import re
 import email
 import time
-# import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 
 
-# doorOpen = GPIO.HIGH
-# doorClosed = GPIO.LOW
-# GPIO.setmode(GPIO.BCM)
-# GPIO.setwarnings(False)
+doorOpen = GPIO.HIGH
+doorClosed = GPIO.LOW
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
 
-# class RelayController:
-# 	signalPin = 0
-# 	def __init__(self, sigPin):
-# 		self.signalPin = sigPin
-# 		GPIO.setup(self.signalPin, GPIO.OUT)
+class RelayController:
+	signalPin = 0
+	def __init__(self, sigPin):
+		self.signalPin = sigPin
+		GPIO.setup(self.signalPin, GPIO.OUT)
 		
-# 	def closeRelay(self):
-# 		if GPIO.input(self.signalPin):
-# 			#print("Relay is closed")
-# 			print(" ")
-# 		else:
-# 			GPIO.output(self.signalPin, GPIO.HIGH)
+	def closeRelay(self):
+		if GPIO.input(self.signalPin):
+			#print("Relay is closed")
+			print(" ")
+		else:
+			GPIO.output(self.signalPin, GPIO.HIGH)
 	
-# 	def openRelay(self):
-# 		GPIO.output(self.signalPin, GPIO.LOW)
+	def openRelay(self):
+		GPIO.output(self.signalPin, GPIO.LOW)
 		
-# 	def closeAndOpen(self):
-# 		GPIO.output(self.signalPin, GPIO.HIGH)
-# 		time.sleep(0.2)
-# 		GPIO.output(self.signalPin, GPIO.LOW)
+	def closeAndOpen(self):
+		GPIO.output(self.signalPin, GPIO.HIGH)
+		time.sleep(0.2)
+		GPIO.output(self.signalPin, GPIO.LOW)
 
-# relay = RelayController(23)
+relay = RelayController(23)
 
 # IMAP server settings (example using example.com)
 IMAP_SERVER = "imap.gmail.com"
