@@ -20,4 +20,6 @@ For everything to run correctly, copy the latest files from the garageControl fo
 This program is meant to automatically launch even in headless mode every time the pi boots up. To accomplish this, a line was added to the file /etc/rc.local with the following:
 ```
 sudo python /home/pi/Desktop/garageControl/garageCloser.py &
+sleep 30
+sudo python /home/pi/Desktop/garageControl/imapEmailMonitorHtml.py &
 ```
