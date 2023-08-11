@@ -39,8 +39,8 @@ import time
 
 # IMAP server settings (example using example.com)
 IMAP_SERVER = "imap.gmail.com"
-
-
+USERNAME = "yourusername@gmail.com"
+PASSWORD = "yourAppPWD"
 
 # SMTP server settings (example using example.com)
 SMTP_SERVER = "smtp.gmail.com"
