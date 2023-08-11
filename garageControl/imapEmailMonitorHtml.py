@@ -80,7 +80,7 @@ while True:
                             body = part.get_payload(decode=True).decode()
                             # if re.search(r'\bmessage\b', body, re.IGNORECASE):
                             if re.search(r'\bopendoor\b', body, re.IGNORECASE):
-                                # relay.closeAndOpen()
+                                relay.closeAndOpen()
                                 response_subject = "Re: " + msg["Subject"]
                                 response_body = "Message received"
                                 
